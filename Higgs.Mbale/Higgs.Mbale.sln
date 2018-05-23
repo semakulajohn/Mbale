@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.Admin", "Higgs.Mbale.Admin\Higgs.Mbale.Admin.csproj", "{00FC9D1A-555A-4193-8248-A9B8456A0CAD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.BAL", "Higgs.Mbale.BAL\Higgs.Mbale.BAL.csproj", "{9C546D18-800A-4AA9-8300-9F697FC7B064}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.DAL", "Higgs.Mbale.DAL\Higgs.Mbale.DAL.csproj", "{43CFA7A7-4325-48FD-9EFB-88A59E13FCD3}"
@@ -23,16 +21,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.Library", "Higg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.Models", "Higgs.Mbale.Models\Higgs.Mbale.Models.csproj", "{DC41076A-9654-4CFB-AFAF-633FD6953A86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.Web", "Higgs.Mbale.Web\Higgs.Mbale.Web.csproj", "{1637E6A2-6051-4660-B5D0-9EDF60A4D501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Higgs.Mbale.DependencyResolver", "Higgs.Mbale.DependencyResolver\Higgs.Mbale.DependencyResolver.csproj", "{4A7392B3-A291-4277-9CD8-E6DCA9B6DE52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00FC9D1A-555A-4193-8248-A9B8456A0CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00FC9D1A-555A-4193-8248-A9B8456A0CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00FC9D1A-555A-4193-8248-A9B8456A0CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00FC9D1A-555A-4193-8248-A9B8456A0CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C546D18-800A-4AA9-8300-9F697FC7B064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C546D18-800A-4AA9-8300-9F697FC7B064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C546D18-800A-4AA9-8300-9F697FC7B064}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +69,14 @@ Global
 		{DC41076A-9654-4CFB-AFAF-633FD6953A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC41076A-9654-4CFB-AFAF-633FD6953A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC41076A-9654-4CFB-AFAF-633FD6953A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1637E6A2-6051-4660-B5D0-9EDF60A4D501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1637E6A2-6051-4660-B5D0-9EDF60A4D501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1637E6A2-6051-4660-B5D0-9EDF60A4D501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1637E6A2-6051-4660-B5D0-9EDF60A4D501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7392B3-A291-4277-9CD8-E6DCA9B6DE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7392B3-A291-4277-9CD8-E6DCA9B6DE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7392B3-A291-4277-9CD8-E6DCA9B6DE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7392B3-A291-4277-9CD8-E6DCA9B6DE52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

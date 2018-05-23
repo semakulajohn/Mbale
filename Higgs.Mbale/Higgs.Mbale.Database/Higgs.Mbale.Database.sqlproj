@@ -71,5 +71,37 @@
     <Build Include="Schema Objects\Schemas\dbo\Tables\AspNet\AspNetUserLogins.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\AspNet\AspNetUserRoles.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\AspNet\AspNetUsers.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Activity.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ActivityBranch.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Batch.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\BatchSupplier.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Branch.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\BranchSector.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\CasualWorker.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Customer.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Delivery.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Document.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\ExtensionType.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Factory.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Grade.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Inventory.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\MachineRepair.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Media.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\MediaType.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Order.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Product.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Sector.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Size.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Status.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Store.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\WeightNote.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\WeightNoteValue.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Stock.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\StockSize.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Income.sql" />
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Expense.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Higgs.Mbale.Database.publish.xml" />
   </ItemGroup>
 </Project>
