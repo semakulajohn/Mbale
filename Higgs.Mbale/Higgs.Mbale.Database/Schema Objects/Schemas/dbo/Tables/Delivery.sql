@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Delivery]
 (
 	[DeliveryId] BIGINT IDENTITY(1,1) NOT NULL,	
-	[CustomerId] BIGINT not NULL,
+	[CustomerId] [nvarchar](128) not NULL,
 	[DriverName]   FLOAT NOT NULL,
 	[ProductId]    BIGINT NOT NULL,
 	[VehicleNumber] [nvarchar](128) NOT NULL,
@@ -20,7 +20,7 @@
 (
 	[DeliveryId] ASC
 ),
-CONSTRAINT [FK_Delivery_CustomerId] FOREIGN KEY([CustomerId]) REFERENCES [dbo].[Customer](CustomerId),
+CONSTRAINT [FK_Delivery_CustomerId] FOREIGN KEY([CustomerId]) REFERENCES [dbo].[AspNetUsers](Id),
 CONSTRAINT [FK_Delivery_ProductId] FOREIGN KEY([ProductId]) REFERENCES [dbo].[Product](ProductId),
 CONSTRAINT [FK_Delivery_BranchId] FOREIGN KEY([BranchId]) REFERENCES [dbo].[Branch](BranchId),
 CONSTRAINT [FK_Delivery_CreatedBy] FOREIGN KEY ([CreatedBy]) REFERENCES [dbo].[AspNetUsers](Id),
