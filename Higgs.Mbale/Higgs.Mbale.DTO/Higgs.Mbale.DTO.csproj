@@ -39,7 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetUserDTO.cs" />
+    <Compile Include="BatchDTO.cs" />
+    <Compile Include="BranchDTO.cs" />
+    <Compile Include="CasualWorkerDTO.cs" />
+    <Compile Include="DeliveryDTO.cs" />
+    <Compile Include="DocumentDTO.cs" />
+    <Compile Include="ExpenseDTO.cs" />
+    <Compile Include="FactoryDTO.cs" />
+    <Compile Include="GradeDTO.cs" />
+    <Compile Include="IncomeDTO.cs" />
+    <Compile Include="InventoryDTO.cs" />
+    <Compile Include="MediaDTO.cs" />
+    <Compile Include="OrderDTO.cs" />
+    <Compile Include="ProductDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SizeDTO.cs" />
+    <Compile Include="StockDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

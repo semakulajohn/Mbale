@@ -7,6 +7,7 @@
 	[VehicleNumber] [nvarchar](128) NOT NULL,
 	[MediaId]     BIGINT NOT NULL,
 	[BranchId]  BIGINT NOT NULL,
+	[Location]   [nvarchar](max) not null,
 	[Deleted]	[bit] NULL,
 	[CreatedBy] [nvarchar](128) NULL, 
     [UpdatedBy] [nvarchar](128) NULL,     

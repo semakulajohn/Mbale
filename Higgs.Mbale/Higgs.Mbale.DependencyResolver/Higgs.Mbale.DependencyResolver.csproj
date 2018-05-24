@@ -39,6 +39,14 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,6 +64,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Higgs.Mbale.BAL\Higgs.Mbale.BAL.csproj">
+      <Project>{9c546d18-800a-4aa9-8300-9f697fc7b064}</Project>
+      <Name>Higgs.Mbale.BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Higgs.Mbale.DAL\Higgs.Mbale.DAL.csproj">
+      <Project>{43cfa7a7-4325-48fd-9efb-88a59e13fcd3}</Project>
+      <Name>Higgs.Mbale.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Higgs.Mbale.EF\Higgs.Mbale.EF.csproj">
+      <Project>{07b463f6-6bec-4821-921d-84c9ed1dab66}</Project>
+      <Name>Higgs.Mbale.EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

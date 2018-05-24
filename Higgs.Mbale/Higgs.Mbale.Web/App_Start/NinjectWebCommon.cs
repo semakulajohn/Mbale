@@ -10,6 +10,12 @@ namespace Higgs.Mbale.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Modules;
+    using System.Collections.Generic;
+    using System.Web.Http;
+    using Higgs.Mbale.DependencyResolver;
+    using Higgs.Mbale.Web._classes;
+    using Higgs.Mbale.Interfaces;
 
     public static class NinjectWebCommon 
     {
@@ -18,13 +24,13 @@ namespace Higgs.Mbale.Web.App_Start
         /// <summary>
         /// Starts the application
         /// </summary>
-        public static void Start() 
+        public static void Start()
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
         }
-        
+
         /// <summary>
         /// Stops the application.
         /// </summary>
@@ -32,7 +38,7 @@ namespace Higgs.Mbale.Web.App_Start
         {
             bootstrapper.ShutDown();
         }
-        
+
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
@@ -46,6 +52,9 @@ namespace Higgs.Mbale.Web.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+                // Install our Ninject-based IDependencyResolver into the Web API config
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
+
                 return kernel;
             }
             catch
@@ -61,6 +70,17 @@ namespace Higgs.Mbale.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Load(new List<INinjectModule>
+            {
+                new ModelDependencyResolver(),
+                new ServiceDependencyResolver()
+            });
+
+
+            kernel.Bind(typeof(ICache)).To(typeof(WebCache));
+            kernel.Bind(typeof(IAppContext)).To(typeof(WebContext));
+
+
+        }  
     }
 }

@@ -78,7 +78,6 @@
     <Build Include="Schema Objects\Schemas\dbo\Tables\Branch.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\BranchSector.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\CasualWorker.sql" />
-    <Build Include="Schema Objects\Schemas\dbo\Tables\Customer.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\Delivery.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\Document.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\ExtensionType.sql" />

@@ -4,7 +4,7 @@
 	[Name] [nvarchar](128) not NULL,
 	[Amount] FLOAT NOT NULL,
 	[StatusId] BIGINT NOT NULL,
-	[CustomerId] BIGINT NOT NULL,
+	[CustomerId] [nvarchar](128) NOT NULL,
 	[ProductId]  BIGINT NOT NULL,
 	[BranchId]   BIGINT NOT NULL,
 	[Deleted]	[bit] NULL,
@@ -20,7 +20,7 @@
 	[OrderId] ASC
 ),
 CONSTRAINT [FK_Order_StatusId] FOREIGN KEY([StatusId]) REFERENCES [dbo].[Status](StatusId),
-CONSTRAINT [FK_Order_CustomerId] FOREIGN KEY([CustomerId]) REFERENCES [dbo].[Customer](CustomerId),
+CONSTRAINT [FK_Order_CustomerId] FOREIGN KEY([CustomerId]) REFERENCES [dbo].[AspNetUsers](Id),
 CONSTRAINT [FK_Order_ProductId] FOREIGN KEY([ProductId]) REFERENCES [dbo].[Product](ProductId),
 CONSTRAINT [FK_Order_BranchId] FOREIGN KEY([BranchId]) REFERENCES [dbo].[Branch](BranchId),
 CONSTRAINT [FK_Order_CreatedBy] FOREIGN KEY ([CreatedBy]) REFERENCES [dbo].[AspNetUsers](Id),
