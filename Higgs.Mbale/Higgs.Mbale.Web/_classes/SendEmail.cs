@@ -8,7 +8,7 @@ using System.IO;
 using log4net;
 using Helpers = Higgs.Mbale.Helpers;
 
-namespace REMS.Website._classes
+namespace Higgs.Mbale.Web._classes
 {
     public class SendEmail
     {

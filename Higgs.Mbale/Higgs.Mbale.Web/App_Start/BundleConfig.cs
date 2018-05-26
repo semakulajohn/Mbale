@@ -136,12 +136,9 @@ namespace Higgs.Mbale.Web
 
 .Include("~/app/scripts/controllers/Navigation.js")
 .Include("~/app/scripts/controllers/User.js")
- .Include("~/app/scripts/controllers/estate.js")
- .Include("~/app/scripts/controllers/tenant.js")
-  .Include("~/app/scripts/controllers/house.js")
-.Include("~/app/scripts/controllers/agent.js")
-.Include("~/app/scripts/controllers/transaction.js")
+
 .Include("~/app/scripts/controllers/dashboard.js")
+.Include("~/app/scripts/controllers/branch.js")
 
 .Include("~/app/scripts/controllers/application.js")
 .Include("~/app/scripts/directives/touchSpin.js")

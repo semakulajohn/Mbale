@@ -198,6 +198,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BranchApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserApiController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
@@ -217,6 +218,7 @@
   <ItemGroup>
     <Content Include="app\scripts\app.js" />
     <Content Include="app\scripts\config.js" />
+    <Content Include="app\scripts\controllers\branch.js" />
     <Content Include="app\scripts\controllers\dashboard.js" />
     <Content Include="app\scripts\controllers\Modal.js" />
     <Content Include="app\scripts\controllers\Navigation.js" />
@@ -269,23 +271,10 @@
     <Content Include="app\scripts\services\template\tour.js" />
     <Content Include="app\scripts\services\template\wizard.js" />
     <Content Include="app\styles\isteven-multi-select.css" />
-    <Content Include="app\views\agent\agent-client.html" />
-    <Content Include="app\views\agent\commission-per-client.html" />
-    <Content Include="app\views\agent\list.html" />
-    <Content Include="app\views\agent\manage-agent.html" />
+    <Content Include="app\views\branch\edit.html" />
+    <Content Include="app\views\branch\list.html" />
     <Content Include="app\views\dashboard.html" />
-    <Content Include="app\views\estate\edit.html" />
-    <Content Include="app\views\estate\estate-house.html" />
-    <Content Include="app\views\estate\list.html" />
-    <Content Include="app\views\house\edit.html" />
-    <Content Include="app\views\house\house-tenants.html" />
-    <Content Include="app\views\house\list.html" />
     <Content Include="app\views\modal\modalAgent.html" />
-    <Content Include="app\views\tenant\edit.html" />
-    <Content Include="app\views\tenant\list.html" />
-    <Content Include="app\views\transaction\edit.html" />
-    <Content Include="app\views\transaction\list.html" />
-    <Content Include="app\views\transaction\tenant-transactions.html" />
     <Content Include="app\views\_common\Breadcrumb.html" />
     <Content Include="app\views\_common\content.html" />
     <Content Include="app\views\_common\content_blank.html" />
@@ -2289,11 +2278,15 @@
     <Content Include="bower_components\ui-select\dist\select.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="email-templates\ForgotPassword.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Av.jpg" />
+    <Content Include="images\loading-bars.svg" />
+    <Content Include="images\logo.gif" />
     <Content Include="js\angular-bootstrap-nav-tree\abn_tree.css" />
     <Content Include="js\angular-bootstrap-nav-tree\abn_tree_directive.js" />
     <Content Include="js\angular-bootstrap-nav-tree\ReadMe.txt" />
@@ -2966,6 +2959,27 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="styles\abn_tree.css" />
+    <Content Include="styles\img\green%402x.png" />
+    <Content Include="styles\img\green.png" />
+    <Content Include="styles\kendo\Default\editor.png" />
+    <Content Include="styles\kendo\Default\imagebrowser.png" />
+    <Content Include="styles\kendo\Default\indeterminate.gif" />
+    <Content Include="styles\kendo\Default\loading-image.gif" />
+    <Content Include="styles\kendo\Default\loading.gif" />
+    <Content Include="styles\kendo\Default\loading_2x.gif" />
+    <Content Include="styles\kendo\Default\markers.png" />
+    <Content Include="styles\kendo\Default\markers_2x.png" />
+    <Content Include="styles\kendo\Default\slider-h.gif" />
+    <Content Include="styles\kendo\Default\slider-v.gif" />
+    <Content Include="styles\kendo\Default\sprite.png" />
+    <Content Include="styles\kendo\Default\sprite_2x.png" />
+    <Content Include="styles\kendo\kendo.common.min.css" />
+    <Content Include="styles\kendo\kendo.dataviz.default.min.css" />
+    <Content Include="styles\kendo\kendo.dataviz.min.css" />
+    <Content Include="styles\kendo\kendo.default.min.css" />
+    <Content Include="styles\ng-table.min.css" />
+    <Content Include="styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3011,7 +3025,6 @@
     <Folder Include="bower_components\ng-grid\plugins\" />
     <Folder Include="bower_components\peity\bin\" />
     <Folder Include="bower_components\peity\test\bin\" />
-    <Folder Include="Views\UserAdmin\" />
     <Folder Include="[Config]\nic\" />
     <Folder Include="[Config]\ric\" />
   </ItemGroup>

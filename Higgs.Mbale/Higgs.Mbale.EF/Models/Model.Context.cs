@@ -12,6 +12,7 @@ namespace Higgs.Mbale.EF.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using Higgs.Mbale.EF.Context;
     
     public partial class MbaleEntities : DbContext,IDbContext
     {

@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\BranchDataService.cs" />
     <Compile Include="Concrete\UserDataService.cs" />
     <Compile Include="DataServiceBase.cs" />
+    <Compile Include="Interface\IBranchDataService.cs" />
     <Compile Include="Interface\IUserDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

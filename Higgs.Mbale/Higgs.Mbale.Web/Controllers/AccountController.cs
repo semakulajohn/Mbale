@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
 using Higgs.Mbale.Web.Models;
+using Higgs.Mbale.Web._classes;
 
 namespace Higgs.Mbale.Web.Controllers
 {
@@ -160,13 +161,23 @@ namespace Higgs.Mbale.Web.Controllers
                     return View();
                 }
 
+                    // Send an email with this link
+                    string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                    code = System.Net.WebUtility.UrlEncode(code);
+                    var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+
+                    SendEmail sendEmail = new SendEmail();
+                    sendEmail.SendForgotPasswordEmail(model.Email, user.FirstName, callbackUrl);
+                    return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                }
+
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
                 // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
                 // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
                 // return RedirectToAction("ForgotPasswordConfirmation", "Account");
-            }
+            
 
             // If we got this far, something failed, redisplay form
             return View(model);
@@ -200,14 +211,17 @@ namespace Higgs.Mbale.Web.Controllers
         public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
         {
             if (ModelState.IsValid)
+         
             {
-                var user = await UserManager.FindByNameAsync(model.Email);
+                var user = await UserManager.FindByEmailAsync(model.Email);
                 if (user == null)
                 {
                     ModelState.AddModelError("", "No user found.");
                     return View();
                 }
-                IdentityResult result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
+                var code = System.Net.WebUtility.UrlDecode(model.Code);
+                code = code.Replace(" ", "+");
+                IdentityResult result = await UserManager.ResetPasswordAsync(user.Id, code, model.Password);
                 if (result.Succeeded)
                 {
                     return RedirectToAction("ResetPasswordConfirmation", "Account");

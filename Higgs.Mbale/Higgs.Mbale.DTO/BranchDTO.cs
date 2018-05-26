@@ -9,10 +9,10 @@ namespace Higgs.Mbale.DTO
   public  class BranchDTO
     {
 
-        public long BatchId { get; set; }
-        public long SectorId { get; set; }
+        public long BranchId { get; set; }
         public string Name { get; set; }
-        public double Amount { get; set; }
+        public string Location { get; set; }
+        public string PhoneNumber { get; set; }
         public Nullable<bool> Deleted { get; set; }
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }

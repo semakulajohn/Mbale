@@ -44,7 +44,6 @@
     <Compile Include="Batch.cs" />
     <Compile Include="Branch.cs" />
     <Compile Include="CasualWorker.cs" />
-    <Compile Include="Customer.cs" />
     <Compile Include="Delivery.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="Expense.cs" />

@@ -18,11 +18,13 @@ namespace Higgs.Mbale.DependencyResolver
      {
          //BAL
          Bind(typeof(IUserService)).To(typeof(UserService));
+         Bind(typeof(IBranchService)).To(typeof(BranchService));
 
 
 
          //DAL
          Bind(typeof(IUserDataService)).To(typeof(UserDataService));
+         Bind(typeof(IBranchDataService)).To(typeof(BranchDataService));
      } 
         
           
