@@ -81,7 +81,6 @@
     <Build Include="Schema Objects\Schemas\dbo\Tables\Delivery.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\Document.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\ExtensionType.sql" />
-    <Build Include="Schema Objects\Schemas\dbo\Tables\Factory.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\Grade.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\Inventory.sql" />
     <Build Include="Schema Objects\Schemas\dbo\Tables\MachineRepair.sql" />
